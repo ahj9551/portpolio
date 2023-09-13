@@ -1,5 +1,3 @@
-# URL : <a href="http://www.something-take.shop/index" target="_blank">http://www.something-take.shop/index</a>
-
 ## JAVA
 - com.company.domain : VO 클래스 패키지
   - AuthKeyVO.java : 회원가입 인증 메일 VO 
