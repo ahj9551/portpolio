@@ -37,24 +37,7 @@ public class BoardController {
 	
 	/////////////////////////////////////////////////////////
 	
-	@ResponseBody
-    @RequestMapping(value = "VerifyRecaptcha", method = RequestMethod.POST)
-    public int VerifyRecaptcha(HttpServletRequest request) {
-		logger.info("-- 리캡챠 메소드 실행");
-        VerifyRecaptcha.setSecretKey("6LeX4tkeAAAAAJ7DAZ_zjbNzgI5gCk9XhgNu1T5A");
-//      logger.info("-- 리캡챠 : " + request.getParameter("recaptcha"));
-        String gRecaptchaResponse = request.getParameter("recaptcha");
-        System.out.println(gRecaptchaResponse);
-        //0 = 성공, 1 = 실패, -1 = 오류
-        try {
-            if(VerifyRecaptcha.verify(gRecaptchaResponse))
-                return 0;
-            else return 1;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return -1;
-        }
-    } // VerifyRecaptcha
+	
 	
 	/* 글 등록 메서드 */
 	@RequestMapping(value = "/write.post", method = RequestMethod.POST)
